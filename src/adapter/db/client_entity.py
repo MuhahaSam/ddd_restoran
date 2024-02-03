@@ -1,5 +1,9 @@
 from sqlalchemy import Column, Integer, String, Text, ForeignKey, Table
-from db_metadata import meta_data
+# from . import meta_data
+
+from sqlalchemy import MetaData
+
+meta_data = MetaData()
 
 client_entity = Table(
     "client",
