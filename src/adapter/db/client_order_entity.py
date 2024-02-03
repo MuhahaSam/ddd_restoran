@@ -1,6 +1,8 @@
 from sqlalchemy import Column, Integer, String, Text, ForeignKey, DateTime, Table
-from db_metadata import meta_data
+# from . import meta_data
+from sqlalchemy import MetaData
 
+meta_data = MetaData()
 
 client_order_entity = Table(
     "client_order",
