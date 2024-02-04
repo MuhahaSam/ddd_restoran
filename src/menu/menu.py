@@ -1,4 +1,4 @@
-from .Ingredient import Ingredient
+from Ingredient.Ingredient import Ingredient
 from typing import List
 from dataclasses import dataclass
 
