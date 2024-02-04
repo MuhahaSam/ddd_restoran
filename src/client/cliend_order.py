@@ -2,7 +2,7 @@ from typing import List
 from dataclasses import dataclass
 from datetime import datetime
 from menu import Menu
-from client import Client
+from src.client.client import Client
 
 
 @dataclass
