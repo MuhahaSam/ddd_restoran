@@ -24,7 +24,7 @@ def upgrade() -> None:
           Column('id', Integer(), primary_key = True),
           Column('name', String(), nullable = False),
           Column('prize', Integer(), nullable = False),
-          Column('weight(g)', Integer(), nullable = False),
+          Column('weight', Integer(), nullable = False),
           Column('kcal', Integer(), nullable = False),
           Column('user_id', Integer(), nullable= False),
           Column('client_order_id', Integer(), nullable= False),

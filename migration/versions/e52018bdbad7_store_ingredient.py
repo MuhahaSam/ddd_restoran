@@ -26,7 +26,7 @@ def upgrade() -> None:
         Column('where_from', String(), nullable=False),
         Column('order_date', DateTime(), nullable=False),
         Column('expiration_day', Integer(), nullable=False), #how many day left
-        Column('inventory(kg)', Integer(), nullable=False),
+        Column('inventory', Integer(), nullable=False),
                 )
 
 

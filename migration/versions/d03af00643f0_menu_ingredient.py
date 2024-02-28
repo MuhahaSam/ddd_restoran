@@ -24,7 +24,7 @@ def upgrade() -> None:
         'menu_ingredient',
         Column('id', Integer(), primary_key=True),
         Column('store_ingredient_id', Integer(), nullable = False),
-        Column('weight(g)', Integer(), nullable = False),
+        Column('weight', Integer(), nullable = False),
         Column('menu_id', Integer(), nullable = False),
         ForeignKeyConstraint(['store_ingredient_id'], ['store_ingredient.id']),
         ForeignKeyConstraint(['menu_id'], ['menu.id']),
