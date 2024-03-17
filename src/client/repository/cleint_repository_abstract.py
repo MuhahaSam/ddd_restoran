@@ -7,9 +7,9 @@ class AbstractClientRepository(ABC):
     def create(clientEntity: Client) -> Client:
         pass
 
-    @abstractmethod
-    def read_all() -> [Client]:
-        pass
+    # @abstractmethod
+    # def read_all() -> [Client]:
+    #     pass
 
     @abstractmethod
     def get_by_email(email: str) -> Client:
