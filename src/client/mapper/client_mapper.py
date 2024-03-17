@@ -1,6 +1,7 @@
 from ..models.client import Client
 from src.adapter.db.client_entity import ClientEntity
 from ..dto.client_create_dto import CreateClientDto
+from ..dto.readonly_client import ReadOnlyClient
 
 
 class ClientMapper(object):
@@ -34,4 +35,13 @@ class ClientMapper(object):
             last_name=client_entity.last_name,
             email=client_entity.email,
             password=client_entity.password
+        )
+
+    @classmethod
+    def model_to_readonly(cls, client_model: Client) -> ReadOnlyClient:
+        return ReadOnlyClient(
+            id=client_model.id,
+            first_name=client_model.first_name,
+            last_name=client_model.last_name,
+            email=client_model.email
         )
