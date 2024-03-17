@@ -1,0 +1,4 @@
+PHONY: generate
+
+start:
+	python -m uvicorn src/main:app --reload
