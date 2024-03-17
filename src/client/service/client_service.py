@@ -1,5 +1,6 @@
 from ..mapper.client_mapper import ClientMapper
 from ..dto.client_create_dto import CreateClientDto
+from ..dto.readonly_client import ReadOnlyClient
 from ..models.client import Client
 from ..repository.client_repository import ClientRepository
 from ..repository.cleint_repository_abstract import AbstractClientRepository
@@ -20,6 +21,10 @@ class ClientService:
         client = self.client_repository.create(client)
         return client.id
     
+    def get_by_email(self, email:str) -> Client:
+        client: Client = self.client_repository.get_by_email(email)
+        readonly_client: ReadOnlyClient = ClientMapper.model_to_readonly(client)
+        return readonly_client
     # def get_all(self):
         
 

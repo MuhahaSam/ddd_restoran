@@ -23,7 +23,10 @@ class ClientRepository(AbstractClientRepository):
         with self.session as sess:
             clientEntity = sess.query(ClientEntity).filter(
                 ClientEntity.email == email).first()
-            return ClientMapper.entity_to_model(clientEntity)
+            # return ClientMapper.entity_to_model(clientEntity)
+            if clientEntity:
+                return ClientMapper.entity_to_model(clientEntity)
+            return None
         
     # def get_all(self) -> [ClientEntity]:
         
